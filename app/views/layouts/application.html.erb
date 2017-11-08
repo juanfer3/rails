@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyApp</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
+  </head>
+
+  <body>
+    <!--Barra de navegacion-->
+    <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo right">Logo</a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li>
+          <%= link_to "autores", autores_path%>
+          
+          
+        </li>
+        <li>
+          <%= link_to "libros", libros_path%>
+          
+        </li>
+        <li>
+          <%= link_to "articles", articles_path%>
+    
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!--Barra de navegacion-->
+  <div class="container ">
+    <%= yield %>
+  </div>
+  </body>
+</html>
